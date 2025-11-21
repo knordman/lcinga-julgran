@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lions Club Ingå: Reservera Julgran 2025</title>
+    <style>
+      /* Modern CSS Styling */
+      :root {
+        --primary-color: #00529c;
+        --secondary-color: #99bad8; /* Guld/Julgult */
+        --light-bg: #fcfcfc;
+        --text-color: #333;
+        --error-color: #e30016; /* Röd färg för felmeddelanden */
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: var(--light-bg);
+        color: var(--text-color);
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 40px auto;
+        padding: 30px;
+        background-color: #fff;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+      }
+
+      header h1 {
+        color: var(--primary-color);
+        text-align: center;
+        margin-bottom: 5px;
+        font-size: 2.2em;
+      }
+
+      header p {
+        text-align: center;
+        font-weight: 300;
+        margin-bottom: 25px;
+        color: #666;
+      }
+
+      header strong {
+        font-weight: 600;
+      }
+
+      /* Intro Styling */
+      .intro-section {
+        border-left: 5px solid var(--secondary-color);
+        padding-left: 20px;
+        margin-bottom: 30px;
+        background-color: #f0f5f9;
+        padding: 15px 20px;
+        border-radius: 5px;
+      }
+
+      .intro-section h3 {
+        color: var(--primary-color);
+        margin-top: 0;
+        font-size: 1.4em;
+      }
+
+      .intro-list {
+        list-style: none;
+        padding: 0;
+      }
+
+      .intro-list li {
+        margin-bottom: 10px;
+        line-height: 1.5;
+      }
+
+      /* Form Styling */
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
+        color: var(--primary-color);
+      }
+
+      input[type="text"],
+      input[type="tel"] {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+        transition: border-color 0.3s;
+      }
+
+      /* NY CSS för att hantera Postnummer/Ort på samma rad */
+      .address-group-inline {
+        display: flex;
+        gap: 20px; /* Mellanrum mellan fälten */
+      }
+
+      .address-group-inline > div {
+        flex: 1; /* Gör att båda fälten tar upp lika mycket bredd */
+      }
+
+      /* NYTT: Styling för felmeddelanden */
+      .error-message {
+        color: var(--error-color);
+        font-size: 0.9em;
+        margin-top: 5px;
+        display: none; /* Dölj som standard */
+      }
+
+      input:invalid:not(:placeholder-shown),
+      input.invalid {
+        border-color: var(--error-color) !important;
+      }
+
+      input[type="text"]:focus,
+      input[type="tel"]:focus {
+        border-color: var(--primary-color);
+        outline: none;
+      }
+
+      /* Radio Button Group Styling - Justerad för att tvinga vertikal lista */
+      .radio-group label {
+        display: flex; /* Ändrad från inline-flex till flex för vertikal stapling */
+        align-items: center;
+        margin-right: 0; /* Tar bort horisontell marginal */
+        margin-bottom: 10px; /* Lägger till vertikal marginal mellan alternativen */
+        font-weight: normal;
+        color: var(--text-color);
+        cursor: pointer;
+      }
+
+      /* Se till att granstorlekarna fortfarande är bredvid varandra (om de får plats) */
+      .gran-size-group label {
+        display: inline-flex;
+        margin-right: 20px;
+      }
+
+      .radio-group input[type="radio"] {
+        margin-right: 8px;
+        appearance: none; /* Dölj standard radio */
+        width: 18px;
+        height: 18px;
+        border: 2px solid var(--primary-color);
+        border-radius: 50%;
+        position: relative;
+        outline: none;
+        cursor: pointer;
+      }
+
+      .radio-group input[type="radio"]:checked {
+        background-color: var(--primary-color);
+        border-color: var(--primary-color);
+      }
+
+      .radio-group input[type="radio"]:checked::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 8px;
+        height: 8px;
+        background: white;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      /* Submit Button */
+      .submit-button {
+        width: 100%;
+        padding: 15px;
+        background-color: var(--primary-color);
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 1.1em;
+        font-weight: 700;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        margin-top: 20px;
+      }
+
+      .submit-button:hover {
+        background-color: #00332e;
+      }
+
+      /* Footer Info */
+      .footer-info {
+        margin-top: 30px;
+        padding-top: 20px;
+        border-top: 1px solid #eee;
+        text-align: center;
+        font-size: 0.9em;
+        color: #777;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>🎄 Beställ din Lions Club Julgran 2025!</h1>
+        <p>
+          Lions Club Ingå ordnar <strong>julmarknad</strong> den
+          <strong>20 december 2025</strong> mellan kl. 10.00 och 13.00 vid
+          S-market i Ingå.
+        </p>
+      </header>
+
+      <div class="intro-section">
+        <h3>Stöd välgörenhet – få julstämning!</h3>
+        <p>
+          Genom att köpa en gran stöder du Lions Clubs Ingås välgörenhetsarbete
+          i vår kommun. Alla våra granar är 100% lokala natur-/skogsgranar från
+          Ingå-området.
+        </p>
+
+        <p>Använd detta formulär för att:</p>
+        <ul class="intro-list">
+          <li>✔️ Reservera hemleverans för din julgran</li>
+          <li>✔️ Få din gran levererad innan julmarknaden (14.12)</li>
+        </ul>
+
+        <p>
+          Du är givetvis även välkommen till marknaden 20.12 för att välja och
+          hämta din gran själv!
+        </p>
+      </div>
+
+      <form action="#" id="orderForm">
+        <div class="form-group">
+          <label for="name">Namn</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Telefonnummer</label>
+          <input type="tel" id="phone" name="Telefon" required />
+        </div>
+
+        <div class="form-group">
+          <label for="street">Leveransadress</label>
+          <input
+            type="text"
+            id="street"
+            autocomplete="street-address"
+            required
+          />
+        </div>
+
+        <div class="address-group-inline">
+          <div class="form-group">
+            <label for="zip">Postnummer</label>
+            <input
+              type="text"
+              id="zip"
+              autocomplete="postal-code"
+              pattern="^(10210|10230|10240|10250|10270)$"
+              title="Tyvärr kan vi bara leverera inom Ingå kommun 😔"
+              required
+            />
+            <p id="zipError" class="error-message">
+              Postnumret måste tillhöra Ingå kommun (t.ex. 10210, 10230, 10240,
+              10250 eller 10270).
+            </p>
+          </div>
+
+          <div class="form-group">
+            <label for="city">Ort</label>
+            <input
+              type="text"
+              id="city"
+              autocomplete="address-level2"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Granbeställning</label>
+          <div class="radio-group">
+            <label>
+              <input type="radio" name="order" value="Högst 2 meter lång gran med hemleverans 14.12" required />Högst 2 meter lång gran med hemleverans 14.12
+            </label>
+            <label>
+              <input type="radio" name="order" value="Mellan 2 och 3 meter lång gran med hemleverans 14.12" />Mellan 2 och 3 meter lång gran med hemleverans 14.12
+            </label>
+            <label>
+              <input type="radio" name="order" value="Mellan 3 och 4 meter med hemleverans 14.12" />Mellan 3 och 4 meter med hemleverans 14.12
+            </label>
+            <label>
+              <input type="radio" name="order" value="Väljer själv på marknaden med hemleverans 20.12" />Väljer själv på marknaden med hemleverans 20.12
+            </label>
+          </div>
+        </div>
+
+        <button type="submit" class="submit-button">BESTÄLL GRAN</button>
+      </form>
+
+      <div class="footer-info">
+        <p>
+          Lions Club Ingå. Alla intäkter går till lokalt välgörenhetsarbete.
+        </p>
+      </div>
+    </div>
+  </body>
+  <script type="module">
+    document.addEventListener("DOMContentLoaded", () => {
+      const form = document.getElementById("orderForm");
+      if (form) {
+        form.addEventListener("submit", validateForm);
+      }
+    });
+
+    function getCheckedValue(name) {
+      const selected = document.querySelector(`input[name="${name}"]:checked`);
+      if (selected) {
+        return selected.value;
+      }
+    }
+
+    function validateForm(event) {
+      event.preventDefault();
+
+      const firstInvalid = orderForm.querySelector(".invalid");
+      if (firstInvalid) {
+        firstInvalid.focus();
+        firstInvalid.reportValidity();
+      } else {
+        const body = [
+          "Beställningsinformation:",
+          `Namn: ${document.getElementById("name").value.trim()}`,
+          `Telefon: ${document.getElementById("phone").value.trim()}`,
+          `Beställning: ${getCheckedValue("order")}`,
+          `Adress: ${document.getElementById("street").value.trim()}, ${document
+            .getElementById("zip")
+            .value.trim()}, ${document.getElementById("city").value.trim()}`,
+        ].join("\n");
+        const mailtoAddress = "gran@lcinga.fi";
+        const subject = "Julgranbeställning Lions Club Ingå 2025";
+        const encodedSubject = encodeURIComponent(subject);
+        const encodedBody = encodeURIComponent(body);
+        const mailtoLink = `mailto:${mailtoAddress}?subject=${encodedSubject}&body=${encodedBody}`;
+        window.location.href = mailtoLink;
+      }
+    }
+  </script>
+</html>
