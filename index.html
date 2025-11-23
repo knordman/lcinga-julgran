@@ -5,13 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lions Club Ingå: Reservera Julgran 2025</title>
     <style>
-      /* Modern CSS Styling */
       :root {
         --primary-color: #00529c;
-        --secondary-color: #99bad8; /* Guld/Julgult */
+        --secondary-color: #99bad8;
         --light-bg: #fcfcfc;
         --text-color: #333;
-        --error-color: #e30016; /* Röd färg för felmeddelanden */
+        --error-color: #e30016;
       }
 
       body {
@@ -97,22 +96,13 @@
         transition: border-color 0.3s;
       }
 
-      /* NY CSS för att hantera Postnummer/Ort på samma rad */
       .address-group-inline {
         display: flex;
-        gap: 20px; /* Mellanrum mellan fälten */
+        gap: 20px;
       }
 
       .address-group-inline > div {
-        flex: 1; /* Gör att båda fälten tar upp lika mycket bredd */
-      }
-
-      /* NYTT: Styling för felmeddelanden */
-      .error-message {
-        color: var(--error-color);
-        font-size: 0.9em;
-        margin-top: 5px;
-        display: none; /* Dölj som standard */
+        flex: 1;
       }
 
       input:invalid:not(:placeholder-shown),
@@ -126,26 +116,26 @@
         outline: none;
       }
 
-      /* Radio Button Group Styling - Justerad för att tvinga vertikal lista */
       .radio-group label {
-        display: flex; /* Ändrad från inline-flex till flex för vertikal stapling */
-        align-items: center;
-        margin-right: 0; /* Tar bort horisontell marginal */
-        margin-bottom: 10px; /* Lägger till vertikal marginal mellan alternativen */
+        display: flex;
+        align-items: flex-start;
+        margin-right: 0;
+        margin-bottom: 12px;
         font-weight: normal;
         color: var(--text-color);
         cursor: pointer;
+        line-height: 1.3;
       }
 
-      /* Se till att granstorlekarna fortfarande är bredvid varandra (om de får plats) */
-      .gran-size-group label {
-        display: inline-flex;
-        margin-right: 20px;
+      .radio-group span {
+        flex-grow: 1;
+        align-content: center;
       }
 
       .radio-group input[type="radio"] {
+        flex-shrink: 0;
         margin-right: 8px;
-        appearance: none; /* Dölj standard radio */
+        appearance: none;
         width: 18px;
         height: 18px;
         border: 2px solid var(--primary-color);
@@ -279,10 +269,6 @@
               title="Tyvärr kan vi bara leverera inom Ingå kommun 😔"
               required
             />
-            <p id="zipError" class="error-message">
-              Postnumret måste tillhöra Ingå kommun (t.ex. 10210, 10230, 10240,
-              10250 eller 10270).
-            </p>
           </div>
 
           <div class="form-group">
@@ -305,29 +291,37 @@
                 name="order"
                 value="2,0–2,3 meter lång gran med hemleverans 14.12. Pris 50€."
                 required
-              />2,0–2,3 meter lång gran med hemleverans 14.12. Pris 50€.
+              /><span
+                >2,0–2,3 meter lång gran med hemleverans 14.12. Pris 50€.</span
+              >
             </label>
             <label>
               <input
                 type="radio"
                 name="order"
                 value="2,5–3,0 meter lång gran med hemleverans 14.12. Pris 60€."
-              />2,5–3,0 meter lång gran med hemleverans 14.12. Pris 60€.
+              /><span
+                >2,5–3,0 meter lång gran med hemleverans 14.12. Pris 60€.</span
+              >
             </label>
             <label>
               <input
                 type="radio"
                 name="order"
                 value="3,5–4,0 meter lång gran med hemleverans 14.12. Pris 70€."
-              />3,5–4,0 meter lång gran med hemleverans 14.12. Pris 70€.
+              /><span
+                >3,5–4,0 meter lång gran med hemleverans 14.12. Pris 70€.</span
+              >
             </label>
             <label>
               <input
                 type="radio"
                 name="order"
                 value="Väljer själv på marknaden med hemleverans 20.12"
-              />Väljer själv på marknaden med hemleverans 20.12. Pris 40–70€ +
-              10€ för leverans.
+              /><span
+                >Väljer själv på marknaden med hemleverans 20.12. Pris 40–70€ +
+                10€ för leverans.</span
+              >
             </label>
           </div>
         </div>
