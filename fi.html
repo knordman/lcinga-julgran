@@ -216,50 +216,49 @@
   <body>
     <div class="container">
       <div id="lang-switch">
-        <a href="fi.html">Suomeksi (FI)</a>
+        <a href="index.html">På svenska (SV)</a>
       </div>
       <header>
-        <h1>🎄 Beställ din Lions Club Julgran 2025!</h1>
+        <h1>🎄 Tilaa Lions Club Joulukuusesi 2025!</h1>
         <p>
-          Lions Club Ingå ordnar <strong>julmarknad</strong> den
-          <strong>20 december 2025</strong> mellan kl. 10.00 och 13.00 vid
-          S-market i Ingå.
+          Lions Club Inkoo järjestää
+          <strong>joulumarkkinat</strong> S-marketilla
+          <strong>20. joulukuuta 2025</strong> klo 10.00–13.00.
         </p>
       </header>
 
       <div class="intro-section">
-        <h3>Stöd välgörenhet – få julstämning!</h3>
+        <h3>Tue hyväntekeväisyyttä – saa joulumieltä!</h3>
         <p>
-          Genom att köpa en gran stöder du Lions Club Ingås välgörenhetsarbete i
-          vår kommun. Alla våra granar är 100% lokala natur-/skogsgranar från
-          Ingå-området.
+          Ostamalla kuusen tuet LC Inkoon hyväntekeväisyystyötä. Kuusemme ovat
+          100% Inkoon alueen luonto-/metsäkuusia.
         </p>
 
-        <p>Använd detta formulär för att:</p>
+        <p>Käytä tätä lomaketta jos:</p>
         <ul class="intro-list">
-          <li>✔️ Reservera hemleverans för din julgran</li>
-          <li>✔️ Få din gran levererad innan julmarknaden (14.12)</li>
+          <li>✔️ Haluat varata joulukuusellesi kotiinkuljetuksen</li>
+          <li>✔️ Haluat kuusen toimitettuna ennen markkinoita (14.12)</li>
         </ul>
 
         <p>
-          Du är givetvis även välkommen till marknaden 20.12 för att välja och
-          hämta din gran själv!
+          Voit toki tulla markkinoille 20.12 valitsemaan ja hakemaan kuusesi
+          itse!
         </p>
       </div>
 
       <form action="#" id="orderForm">
         <div class="form-group">
-          <label for="name">Namn</label>
+          <label for="name">Nimi</label>
           <input type="text" id="name" name="name" required />
         </div>
 
         <div class="form-group">
-          <label for="phone">Telefonnummer</label>
+          <label for="phone">Puhelinnumero</label>
           <input type="tel" id="phone" name="Telefon" required />
         </div>
 
         <div class="form-group">
-          <label for="street">Leveransadress</label>
+          <label for="street">Toimitusosoite</label>
           <input
             type="text"
             id="street"
@@ -270,7 +269,7 @@
 
         <div class="address-group-inline">
           <div class="form-group">
-            <label for="zip">Postnummer</label>
+            <label for="zip">Postinumero</label>
             <input
               type="text"
               id="zip"
@@ -280,13 +279,13 @@
               required
             />
             <p id="zipError" class="error-message">
-              Postnumret måste tillhöra Ingå kommun (t.ex. 10210, 10230, 10240,
-              10250 eller 10270).
+              Postinumeron tulee olla Inkoon kunnan alueelta (esim. 10210,
+              10230, 10240, 10250, 10270).
             </p>
           </div>
 
           <div class="form-group">
-            <label for="city">Ort</label>
+            <label for="city">Paikkakunta</label>
             <input
               type="text"
               id="city"
@@ -297,47 +296,48 @@
         </div>
 
         <div class="form-group">
-          <label>Granbeställning</label>
+          <label>Kuusitilaus</label>
           <div class="radio-group">
             <label>
               <input
                 type="radio"
                 name="order"
-                value="1,8–2,1 meter lång gran med hemleverans 14.12. Pris 50€."
+                value="1,8–2,1 m kuusi, kotiinkuljetuksella 14.12. Hinta 50€."
                 required
-              />1,8–2,1 meter lång gran med hemleverans 14.12. Pris 50€.
+              />1,8–2,1 m kuusi, kotiinkuljetuksella 14.12. Hinta 50€.
             </label>
             <label>
               <input
                 type="radio"
                 name="order"
-                value="2,5–3,0 meter lång gran med hemleverans 14.12. Pris 60€."
-              />2,5–3,0 meter lång gran med hemleverans 14.12. Pris 60€.
+                value="2,5–3,0 m kuusi, kotiinkuljetuksella 14.12. Hinta 60€."
+              />2,5–3,0 m kuusi, kotiinkuljetuksella 14.12. Hinta 60€.
             </label>
             <label>
               <input
                 type="radio"
                 name="order"
-                value="3,5–4,0 meter lång gran med hemleverans 14.12. Pris 70€."
-              />3,5–4,0 meter lång gran med hemleverans 14.12. Pris 70€.
+                value="3,5–4,0 m kuusi, kotiinkuljetuksella 14.12. Hinta 70€."
+              />3,5–4,0 m kuusi, kotiinkuljetuksella 14.12. Hinta 70€.
             </label>
             <label>
               <input
                 type="radio"
                 name="order"
-                value="Väljer själv på marknaden med hemleverans 20.12"
-              />Väljer själv på marknaden med hemleverans 20.12. Pris 40–70€ +
-              10€ för leverans.
+                value="Valitsen kuusen markkinoilta, toimitus 20.12. Hinta 40–70€ + 10€ kotiinkuljetus."
+              />Valitsen kuusen markkinoilta, toimitus 20.12. Hinta 40–70€ + 10€
+              kotiinkuljetus.
             </label>
           </div>
         </div>
 
-        <button type="submit" class="submit-button">BESTÄLL GRAN</button>
+        <button type="submit" class="submit-button">TILAA KUUSI</button>
       </form>
 
       <div class="footer-info">
         <p>
-          Lions Club Ingå. Alla intäkter går till lokalt välgörenhetsarbete.
+          Lions Club Inkoo. Kaikki tuotot ohjataan paikalliseen
+          hyväntekeväisyystyöhön.
         </p>
       </div>
     </div>
@@ -366,18 +366,18 @@
         firstInvalid.reportValidity();
       } else {
         const body = [
-          "Beställningsinformation:",
-          `Namn: ${document.getElementById("name").value.trim()}`,
-          `Telefon: ${document.getElementById("phone").value.trim()}`,
-          `Beställning: ${getCheckedValue("order")}`,
-          `Leveransadress: ${document
+          "Tilaustiedot:",
+          `Nimi: ${document.getElementById("name").value.trim()}`,
+          `Puhelinnumero: ${document.getElementById("phone").value.trim()}`,
+          `Tilaus: ${getCheckedValue("order")}`,
+          `Toimitusosoite: ${document
             .getElementById("street")
             .value.trim()}, ${document
             .getElementById("zip")
             .value.trim()}, ${document.getElementById("city").value.trim()}`,
         ].join("\n");
         const mailtoAddress = "julgran@lcinga.fi";
-        const subject = "Julgranbeställning Lions Club Ingå 2025";
+        const subject = "Joulukuusitilaus Lions Club Inkoo 2025";
         const encodedSubject = encodeURIComponent(subject);
         const encodedBody = encodeURIComponent(body);
         const mailtoLink = `mailto:${mailtoAddress}?subject=${encodedSubject}&body=${encodedBody}`;
